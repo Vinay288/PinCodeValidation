@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class PinCodeValidation {
-
-
 	public static boolean pincodeValidation(String pincode) {
 		String pincodeRegex = "^[0-9]{6}$";
 		return Pattern.matches(pincodeRegex, pincode);
@@ -21,6 +19,13 @@ public class PinCodeValidation {
 		}
 		System.out.println("Valid pincode");
 		String checkPincode = "A400088";
+		System.out.println("Pincode to be checked:"+checkPincode);
+		if(pincodeValidation(checkPincode))
+			System.out.println("Valid");
+		else
+			System.out.println("Invalid");
+		
+		checkPincode = "400088B";
 		System.out.println("Pincode to be checked:"+checkPincode);
 		if(pincodeValidation(checkPincode))
 			System.out.println("Valid");
